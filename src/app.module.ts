@@ -9,7 +9,7 @@ import { RouteModule } from './route/route.module';
 @Module({
   imports: [
     DrivineModule.withOptions(<DrivineModuleOptions>{
-      connectionProviders: [DatabaseRegistry.buildOrResolveFromEnv('NEO')],
+      connectionProviders: [DatabaseRegistry.buildOrResolveFromEnv()],
     }),
     RouteModule,
   ],
