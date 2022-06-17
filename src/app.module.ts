@@ -5,6 +5,8 @@ import { DrivineModule } from '@liberation-data/drivine';
 import { DrivineModuleOptions } from '@liberation-data/drivine';
 import { DatabaseRegistry } from '@liberation-data/drivine';
 import { RouteModule } from './route/route.module';
+import { UserController } from './user/user.controller';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -12,8 +14,9 @@ import { RouteModule } from './route/route.module';
       connectionProviders: [DatabaseRegistry.buildOrResolveFromEnv()],
     }),
     RouteModule,
+    UserModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, UserController],
   providers: [AppService],
 })
 export class AppModule {}
