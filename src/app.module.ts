@@ -7,7 +7,7 @@ import { DatabaseRegistry } from '@liberation-data/drivine';
 import { RouteModule } from './route/route.module';
 import { UserController } from './user/user.controller';
 import { UserModule } from './user/user.module';
-import { TaskModule } from './task/task.module';
+import { TaskModule } from './job/job.module';
 
 @Module({
   imports: [
