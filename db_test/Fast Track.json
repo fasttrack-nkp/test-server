@@ -56,8 +56,8 @@
     {
       "id": "n0",
       "position": {
-        "x": 300.1948120142789,
-        "y": 549.5961105944336
+        "x": 241.7374521987388,
+        "y": 203.73408403387924
       },
       "caption": "",
       "labels": [
@@ -72,8 +72,8 @@
     {
       "id": "n1",
       "position": {
-        "x": 75,
-        "y": 492.5318227666819
+        "x": 21.07533530779127,
+        "y": 203.73408403387924
       },
       "caption": "",
       "labels": [
@@ -89,8 +89,8 @@
     {
       "id": "n2",
       "position": {
-        "x": 1359.8926567816277,
-        "y": 586.2102141787327
+        "x": 1543.2663412701145,
+        "y": 406.2292846885025
       },
       "caption": "",
       "labels": [
@@ -145,8 +145,8 @@
     {
       "id": "n5",
       "position": {
-        "x": 300.1948120142789,
-        "y": 756.7285960732704
+        "x": 219.1760538851731,
+        "y": 514.199785846251
       },
       "caption": "",
       "labels": [
@@ -161,8 +161,8 @@
     {
       "id": "n6",
       "position": {
-        "x": 75,
-        "y": 704.7336010920553
+        "x": 21.07533530779127,
+        "y": 514.199785846251
       },
       "caption": "",
       "labels": [
@@ -198,8 +198,8 @@
     {
       "id": "n8",
       "position": {
-        "x": 1359.8926567816277,
-        "y": 756.7285960732704
+        "x": 1570.2956096860125,
+        "y": 734.4373258214073
       },
       "caption": "",
       "labels": [
@@ -234,8 +234,8 @@
     {
       "id": "n10",
       "position": {
-        "x": 932.1726007591466,
-        "y": 937.4672243403875
+        "x": 1030.5441204412373,
+        "y": 904.8217959285504
       },
       "caption": "",
       "labels": [
@@ -274,8 +274,8 @@
     {
       "id": "n12",
       "position": {
-        "x": 724.3685837597811,
-        "y": 901.4987007742591
+        "x": 833.8010810770559,
+        "y": 904.8217959285504
       },
       "caption": "",
       "labels": [
@@ -288,6 +288,39 @@
         "nodeType": "INTERMEDIATE_NODE",
         "timestamp": "0",
         "displayOrder": "3"
+      },
+      "style": {}
+    },
+    {
+      "id": "n13",
+      "position": {
+        "x": 219.1760538851731,
+        "y": 800.8580737867918
+      },
+      "caption": "",
+      "labels": [
+        "ROLE"
+      ],
+      "properties": {
+        "id": "roleId3",
+        "name": "roleName3"
+      },
+      "style": {}
+    },
+    {
+      "id": "n14",
+      "position": {
+        "x": -5.886997038313076,
+        "y": 800.8580737867918
+      },
+      "caption": "",
+      "labels": [
+        "USER"
+      ],
+      "properties": {
+        "id": "userId3",
+        "firstName": "firstName3",
+        "lastName": "lastName3"
       },
       "style": {}
     }
@@ -470,6 +503,70 @@
       "type": "HAS_TASK",
       "properties": {},
       "style": {}
+    },
+    {
+      "id": "n22",
+      "type": "DO_TASK",
+      "style": {},
+      "properties": {},
+      "fromId": "n13",
+      "toId": "n3"
+    },
+    {
+      "id": "n23",
+      "type": "DO_TASK",
+      "style": {},
+      "properties": {},
+      "fromId": "n13",
+      "toId": "n4"
+    },
+    {
+      "id": "n24",
+      "type": "DO_TASK",
+      "style": {},
+      "properties": {},
+      "fromId": "n13",
+      "toId": "n7"
+    },
+    {
+      "id": "n25",
+      "type": "DO_TASK",
+      "style": {},
+      "properties": {},
+      "fromId": "n13",
+      "toId": "n9"
+    },
+    {
+      "id": "n26",
+      "type": "DO_TASK",
+      "style": {},
+      "properties": {},
+      "fromId": "n13",
+      "toId": "n10"
+    },
+    {
+      "id": "n27",
+      "type": "DO_TASK",
+      "style": {},
+      "properties": {},
+      "fromId": "n13",
+      "toId": "n12"
+    },
+    {
+      "id": "n28",
+      "type": "DO_TASK",
+      "style": {},
+      "properties": {},
+      "fromId": "n13",
+      "toId": "n11"
+    },
+    {
+      "id": "n29",
+      "type": "HAS_ROLE",
+      "style": {},
+      "properties": {},
+      "fromId": "n14",
+      "toId": "n13"
     }
   ]
 }
