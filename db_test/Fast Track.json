@@ -1,0 +1,475 @@
+{
+  "style": {
+    "font-family": "sans-serif",
+    "background-color": "#ffffff",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#ffffff",
+    "border-width": 4,
+    "border-color": "#000000",
+    "radius": 50,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#000000",
+    "caption-font-size": 50,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "pill",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#000000",
+    "label-border-width": 4,
+    "label-font-size": 40,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "inline",
+    "detail-orientation": "parallel",
+    "arrow-width": 5,
+    "arrow-color": "#000000",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#000000",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#000000",
+    "type-border-width": 0,
+    "type-font-size": 16,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#000000",
+    "property-font-size": 16,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 300.1948120142789,
+        "y": 549.5961105944336
+      },
+      "caption": "",
+      "labels": [
+        "ROLE"
+      ],
+      "properties": {
+        "id": "roleId1",
+        "name": "roleName1"
+      },
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 75,
+        "y": 492.5318227666819
+      },
+      "caption": "",
+      "labels": [
+        "USER"
+      ],
+      "properties": {
+        "id": "userId1",
+        "firstName": "firstName1",
+        "lastName": "lastName1"
+      },
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 1359.8926567816277,
+        "y": 586.2102141787327
+      },
+      "caption": "",
+      "labels": [
+        "TRACK"
+      ],
+      "properties": {
+        "id": "trackId1",
+        "HN": "HN1"
+      },
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 932.1726007591466,
+        "y": 50
+      },
+      "caption": "",
+      "labels": [
+        "TASK"
+      ],
+      "properties": {
+        "id": "taskId1",
+        "name": "taskName1",
+        "status": "SUCCESS",
+        "nodeType": "START_NODE",
+        "timestamp": "0",
+        "displayOrder": "1"
+      },
+      "style": {}
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 932.1726007591466,
+        "y": 253.02989851898005
+      },
+      "caption": "",
+      "labels": [
+        "TASK"
+      ],
+      "properties": {
+        "id": "taskId2",
+        "name": "taskName2",
+        "status": "PENDING",
+        "nodeType": "INTERMEDIATE_NODE",
+        "timestamp": "0",
+        "displayOrder": "2"
+      },
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 300.1948120142789,
+        "y": 756.7285960732704
+      },
+      "caption": "",
+      "labels": [
+        "ROLE"
+      ],
+      "properties": {
+        "id": "roleId2",
+        "name": "roleName2"
+      },
+      "style": {}
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 75,
+        "y": 704.7336010920553
+      },
+      "caption": "",
+      "labels": [
+        "USER"
+      ],
+      "properties": {
+        "id": "userId2",
+        "firstName": "firstName2",
+        "lastName": "lastName2"
+      },
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": 932.1726007591466,
+        "y": 456.0597970379601
+      },
+      "caption": "",
+      "labels": [
+        "TASK"
+      ],
+      "properties": {
+        "id": "taskId3",
+        "name": "taskName3",
+        "status": "PENDING",
+        "nodeType": "END_NODE",
+        "timestamp": "0",
+        "displayOrder": "3"
+      },
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 1359.8926567816277,
+        "y": 756.7285960732704
+      },
+      "caption": "",
+      "labels": [
+        "TRACK"
+      ],
+      "properties": {
+        "id": "trackId2",
+        "HN": "HN2"
+      },
+      "style": {}
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 932.1726007591466,
+        "y": 734.4373258214073
+      },
+      "caption": "",
+      "labels": [
+        "TASK"
+      ],
+      "properties": {
+        "id": "taskId4",
+        "name": "taskName4",
+        "status": "SUCCESS",
+        "nodeType": "START_NODE",
+        "timestamp": "0",
+        "displayOrder": "1"
+      },
+      "style": {}
+    },
+    {
+      "id": "n10",
+      "position": {
+        "x": 932.1726007591466,
+        "y": 937.4672243403875
+      },
+      "caption": "",
+      "labels": [
+        "TASK"
+      ],
+      "properties": {
+        "id": "taskId5",
+        "name": "taskName5",
+        "status": "SUCCESS",
+        "nodeType": "INTERMEDIATE_NODE",
+        "timestamp": "0",
+        "displayOrder": "2"
+      },
+      "style": {}
+    },
+    {
+      "id": "n11",
+      "position": {
+        "x": 961.2709861521266,
+        "y": 1138.4011031666046
+      },
+      "caption": "",
+      "labels": [
+        "TASK"
+      ],
+      "properties": {
+        "id": "taskId6",
+        "name": "taskName6",
+        "status": "PENDING",
+        "nodeType": "END_NODE",
+        "timestamp": "0",
+        "displayOrder": "4"
+      },
+      "style": {}
+    },
+    {
+      "id": "n12",
+      "position": {
+        "x": 724.3685837597811,
+        "y": 901.4987007742591
+      },
+      "caption": "",
+      "labels": [
+        "TASK"
+      ],
+      "properties": {
+        "id": "taskId7",
+        "name": "taskName7",
+        "status": "PENDING",
+        "nodeType": "INTERMEDIATE_NODE",
+        "timestamp": "0",
+        "displayOrder": "3"
+      },
+      "style": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n1",
+      "toId": "n0",
+      "type": "HAS_ROLE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "fromId": "n2",
+      "toId": "n3",
+      "type": "HAS_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "fromId": "n2",
+      "toId": "n4",
+      "type": "HAS_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "fromId": "n3",
+      "toId": "n4",
+      "type": "THEN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n4",
+      "fromId": "n6",
+      "toId": "n5",
+      "type": "HAS_ROLE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "fromId": "n4",
+      "toId": "n7",
+      "type": "THEN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n6",
+      "fromId": "n0",
+      "toId": "n3",
+      "type": "DO_TASK",
+      "properties": {},
+      "style": {
+        "directionality": "directed"
+      }
+    },
+    {
+      "id": "n7",
+      "fromId": "n2",
+      "toId": "n7",
+      "type": "HAS_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "fromId": "n0",
+      "toId": "n4",
+      "type": "DO_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n9",
+      "fromId": "n5",
+      "toId": "n7",
+      "type": "DO_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n10",
+      "fromId": "n8",
+      "toId": "n9",
+      "type": "HAS_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n11",
+      "fromId": "n8",
+      "toId": "n10",
+      "type": "HAS_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n12",
+      "fromId": "n9",
+      "toId": "n10",
+      "type": "THEN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n13",
+      "fromId": "n10",
+      "toId": "n11",
+      "type": "THEN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n14",
+      "fromId": "n8",
+      "toId": "n11",
+      "type": "HAS_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n15",
+      "fromId": "n0",
+      "toId": "n10",
+      "type": "DO_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n16",
+      "fromId": "n9",
+      "toId": "n12",
+      "type": "THEN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n17",
+      "fromId": "n12",
+      "toId": "n11",
+      "type": "THEN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n18",
+      "fromId": "n5",
+      "toId": "n9",
+      "type": "DO_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n19",
+      "fromId": "n5",
+      "toId": "n11",
+      "type": "DO_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n20",
+      "fromId": "n0",
+      "toId": "n12",
+      "type": "DO_TASK",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n21",
+      "fromId": "n8",
+      "toId": "n12",
+      "type": "HAS_TASK",
+      "properties": {},
+      "style": {}
+    }
+  ]
+}

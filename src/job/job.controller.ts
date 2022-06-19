@@ -16,12 +16,16 @@ export class JobController {
     return await this.JobRepository.getTrackCurrentTasks(trackId);
   }
 
-  // @Get('/all')
-  // async getAllTasks(): Promise<any> {
-  //   return await this.taskRepository.getAllTasks();
-  // }
-  // @Get('/all2')
-  // async getAllTask2(): Promise<any> {
-  //   return await this.taskRepository.getAllTasks2();
-  //
+  @Get('task/all/:trackId')
+  async getAllTasks(@Param('trackId') trackId: string): Promise<any> {
+    return await this.JobRepository.getAllTasks(trackId);
+  }
+
+  @Get('task/:trackId/:roleId')
+  async getTasksByRole(
+    @Param('trackId') trackId: string,
+    @Param('roleId') roleId: string,
+  ): Promise<any> {
+    return await this.JobRepository.getTasksByRole(trackId, roleId);
+  }
 }

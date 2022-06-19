@@ -23,9 +23,10 @@ export class UserRepository {
   async getAllUsers(): Promise<UserEntity[]> {
     return this.persistenceManager.query(
       new QuerySpecification<UserEntity>(`
-      match (user:USER)-[:HAS_ROLE]->(role:ROLE)
-      with user,  collect(role{.*}) as rolePropsList
-      return user{.*, role: rolePropsList}`).transform(UserEntity),
+      MATCH (user:USER)-[:HAS_ROLE]->(role:ROLE)
+      WITH user, collect(role{.*}) AS rolePropsList
+      RETURN user{.*, role: rolePropsList}
+      `).transform(UserEntity),
     );
   }
 
@@ -33,10 +34,11 @@ export class UserRepository {
   async getUserInfo(userId: string): Promise<UserEntity> {
     return this.persistenceManager.getOne(
       new QuerySpecification<UserEntity>(`
-      match (user:USER)-[:HAS_ROLE]->(role:ROLE)
-      where user.id = $1
-      with user,  collect(role{.*}) as rolePropsList
-      return user{.*, role: rolePropsList}`)
+      MATCH (user:USER)-[:HAS_ROLE]->(role:ROLE)
+      WHERE user.id = $1
+      WITH user, collect(role{.*}) AS rolePropsList
+      RETURN user{.*, role: rolePropsList}
+      `)
         .bind([userId])
         .transform(UserEntity),
     );

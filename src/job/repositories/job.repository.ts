@@ -46,4 +46,38 @@ export class JobRepository {
       ).bind([trackId]),
     );
   }
+
+  @Transactional()
+  async getTasksByRole(trackId: string, roleId: string): Promise<any[]> {
+    return this.persistenceManager.query(
+      new QuerySpecification<any>(
+        `
+        MATCH (role:ROLE)-[:DO_TASK]->(task)
+        MATCH (track:TRACK) -[:HAS_TASK]->(task)
+        WHERE track.id = $1 AND role.id = $2
+        OPTIONAL MATCH (taskPrev:TASK)-[:THEN]->(task)
+        WITH task, track{.*} AS trackProps, collect(taskPrev{.*}) AS taskPrevPropsList, collect(taskPrev.status) AS taskPrevStatusList
+        WITH *, reduce(isActive = true , status IN taskPrevStatusList | isActive AND (status = 'SUCCESS')) AS isActive
+        ORDER BY task.displayOrder
+        RETURN task{.*, track: trackProps, taskPrev: taskPrevPropsList, taskPrevStatus: taskPrevStatusList, isActive: isActive }        `,
+      ).bind([trackId, roleId]),
+    );
+  }
+
+  @Transactional()
+  async getAllTasks(trackId: string): Promise<any[]> {
+    return this.persistenceManager.query(
+      new QuerySpecification<any>(
+        `
+        MATCH (role:ROLE)-[:DO_TASK]->(task)
+        MATCH (track:TRACK) -[:HAS_TASK]->(task)
+        WHERE track.id = $1 
+        OPTIONAL MATCH (taskPrev:TASK)-[:THEN]->(task)
+        WITH task, track{.*} AS trackProps, collect(taskPrev{.*}) AS taskPrevPropsList, collect(taskPrev.status) AS taskPrevStatusList
+        WITH *, reduce(isActive = true , status IN taskPrevStatusList | isActive AND (status = 'SUCCESS')) AS isActive
+        ORDER BY task.displayOrder
+        RETURN task{.*, track: trackProps, taskPrev: taskPrevPropsList, taskPrevStatus: taskPrevStatusList, isActive: isActive }        `,
+      ).bind([trackId]),
+    );
+  }
 }
