@@ -32,7 +32,7 @@ export class JobRepository {
 
   @Transactional()
   async getTrackCurrentTasks(trackId: string): Promise<any[]> {
-    return this.persistenceManager.query(
+    return this.persistenceManager.getOne(
       new QuerySpecification<any>(
         `
         match  p = (taskStart:TASK)-[:THEN*]->(taskEnd:TASK)
@@ -41,7 +41,8 @@ export class JobRepository {
         where taskStart.nodeType = 'START_NODE' AND taskEnd.nodeType= 'END_NODE' AND track.id = $1
         with [n in nodes(p) where n.status = 'PENDING' | n] as nodesPending
         with nodesPending[0] as nodesCurrent
-        return nodesCurrent{.*}
+        with collect(nodesCurrent{.*}) as nodeCurrentList
+        return {trackId: $1, currentTasks: nodeCurrentList}
         `,
       ).bind([trackId]),
     );
